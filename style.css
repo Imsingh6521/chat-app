@@ -1,0 +1,373 @@
+:root {
+    --pale-v: hsl(276, 100%, 81%); /*sub-heading at the top of the app UI*/
+    --c-l: hsl(276, 55%, 52%); /*chat on the left*/
+    --c-r: hsl(271, 15%, 43%); /*chat on the right*/
+    --p-t: hsl(206, 6%, 79%); /*placeholder text*/
+    --m-h: hsl(271, 36%, 24%); /*main heading*/
+    --p: hsl(270, 7%, 64%); /*paragraph*/
+    /* for gradient */
+    --l-m: hsl(293, 100%, 63%);
+    --l-v: hsl(264, 100%, 61%);
+    /* secondry */
+    --white: hsl(0, 0%, 100%);
+    --a-b: hsl(270, 20%, 96%); /*app background*/
+    --s-b-b: hsl(271, 36%, 24%); /*submit button background*/
+    --r-b-o: hsl(289, 100%, 72%); /*radio button outline*/
+
+    /* fonts */
+    --f-f: "Rubik", sans-serif;
+    --f-s: 16px;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--a-b);
+
+    font-family: var(--f-f);
+    font-size: var(--f-s);
+}
+
+
+.v-b {
+    width: 40rem;
+    height: 50rem;
+    background: linear-gradient(
+        235deg,
+        var(--l-m) 0%, 
+        var(--l-v) 70%
+    );
+    border-radius: 0 0 50% 50%;
+    margin-left: -10rem;
+}
+
+.last {
+    opacity: .05;
+    border-radius: 50% 50% 0 0;
+    float: right;
+    margin-right: -10rem;
+    margin-top: -35%;
+    position: relative;
+    z-index: -1;
+}
+
+
+.phone {
+    width: 350px;
+    height: 635px;
+    border: 12px solid #fff;
+    border-radius: 32px;
+    margin-left: 20.9%;
+    margin-top: -42rem;
+    background-color: var(--a-b);
+    box-shadow: 0 1rem 2rem var(--p-t);
+}
+
+.header {
+    background: linear-gradient(
+        to left,
+        var(--l-m),
+        var(--l-v)
+    );
+    border-radius: 22px 22px 8px 8px;
+    height: 6rem;
+    margin-bottom: 15px;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 8.5rem;
+    left: 25.5%;
+    width: 200px;
+    height: 27px;
+    background-color: #fff;
+    border-radius: 0px 0px 16px 16px;
+}
+
+.des {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1.6rem;
+}
+
+.header-des {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar {
+    border-radius: 50%;
+    border: solid var(--white) 2px;
+    width: 2.5rem;
+}
+
+.less {
+    color: var(--white);
+    transform: rotate(90deg);
+    margin-right: 10px;
+    margin-left: -2rem;
+}
+
+.name {
+    padding-left: 1rem;
+}
+
+.sam {
+    margin-bottom: 0;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.avail {
+    margin-top: 0;
+    font-size: 12px;
+    color: hsla(270, 20%, 96%, .5)
+}
+
+.three-dot {
+    color: var(--a-b);
+    margin-right: -1.5rem;
+}
+
+.chat-left {
+    color: var(--c-l);
+    background-color: hsl(276, 55%, 52%, .1);
+    width: 140px;
+    padding: 10px 15px;
+    border-radius: 15px 15px 15px 5px;
+    margin-left: 10px;
+    font-size: 10px;
+    line-height: 1.3;
+}
+
+.chat-right {
+    color: var(--c-r);
+    background-color: var(--white);
+    padding: 10px 15px;
+    font-size: 10px;
+    line-height: 1.3;
+    border-radius: 15px 15px 5px 15px;
+}
+
+.c-r {
+    margin-left: 10.5rem;
+    margin-right: 10px;
+}
+
+.c-r1 {
+    margin-left: 14.4rem;
+    margin-right: 10px;
+}
+
+.dog-container {
+    display: flex;
+    gap: 10px;
+    padding-left: 8rem;
+    padding-top: .5rem;
+}
+
+.dog {
+    width: 4rem;
+    border-radius: 15px;
+}
+
+.min {
+    background: linear-gradient(
+        to right,
+        var(--l-m),
+        var(--l-v)
+    );
+    width: 12rem;
+    height: 2.5rem;
+    border-radius: 15px 15px 15px 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 20px;
+    color: var(--white);
+}
+
+.walk {
+    font-size: 10px;
+    padding-left: 5px;
+    padding-top: 3px;
+}
+
+.min > span {
+    font-weight: 500;
+}
+
+.min > div {
+    display: flex;
+    align-items: center;
+}
+
+.min > div > input {
+    accent-color: var(--r-b-o);
+}
+
+.type {
+    height: 3rem;
+    background-color: var(--white);
+    display: flex;
+    width: 20rem;
+    border-radius: 2rem;
+    margin-left: 10px;
+}
+
+
+.type > input {
+    border: none;
+    margin-left: 2rem;
+    border-radius: 2rem;
+}
+
+.type > input::placeholder {
+    color: var(--p-t);
+}
+
+.sub {
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--s-b-b);
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-top: 8px;
+    margin-left: 4.5rem;
+    cursor: pointer;
+}
+
+.simple {
+    font-size: 2.3rem;
+    color: var(--m-h);
+}
+
+.main-container {
+    width: 28rem;
+    position: absolute;
+    top: 20rem;
+    left: 56%;
+}
+
+.main-container p {
+    color: var(--p);
+    line-height: 1.5;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    position: relative;
+    bottom: -8rem;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 1800px) {
+    .header::before {
+        left: 26%;
+    }
+}
+
+@media (max-width: 1650px) {
+    .header::before {
+        left: 26.5%;
+    }
+}
+
+@media (max-width: 1450px) {
+    .header::before {
+        left: 27%;
+    }
+}
+
+@media (max-width: 1350px) {
+    .header::before {
+        left: 27.5%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .header::before {
+        left: 42.5%;
+    }
+
+    .phone {
+        margin-left: 35%;
+    }
+
+    .main-container {
+        top: 53rem;
+        left: 32%;
+        text-align: center;
+        min-width: 28rem;
+    }
+
+    .attribution { 
+        bottom: -20rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .header::before {
+        left: 43%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header::before {
+        left: 44%;
+    }
+}
+
+@media (max-width: 850px) {
+    .header::before {
+        left: 45%;
+    }
+
+    .v-b {
+        margin-left: -15rem;
+    }
+    .last {
+        margin-top: -25%;
+        margin-right: -18rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .header::before {
+        left: 46%;
+    }
+    .v-b {
+        margin-left: -20rem;
+    }
+
+    .last {
+        margin-right: -23rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .header::before {
+        left: 47%;
+    }
+    .last {
+        margin-right: -33rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .header::before {
+        left: 52%;
+    }
+}
